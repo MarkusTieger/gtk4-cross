@@ -2,7 +2,7 @@
 set -euo pipefail
 # shellcheck source=/dev/null
 source "$HOME/.cargo/env"
-cargo build --target=x86_64-pc-windows-gnu --release --locked
+cargo build --target=x86_64-pc-windows-gnu --release --locked ${CARGO_OPTIONS}
 
 mkdir -p package
 cp target/x86_64-pc-windows-gnu/release/*.exe package/
